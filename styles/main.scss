@@ -1,0 +1,15 @@
+$bg-color: #222831;
+    
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Fredoka", cursive;
+    background: linear-gradient(rgba(34, 40, 49, 0.7),
+    rgba(34, 40, 49, 1)) fixed center no-repeat,
+    url("@/assets/img/fantasy1.webp") fixed center no-repeat;
+    background-size: 100%;
+    background-color: $bg-color;
+    margin: 0;
+}
