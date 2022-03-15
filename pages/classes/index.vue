@@ -1,28 +1,18 @@
 <template>
   <div id="content_test">
     <div class="codex-container">
-      <div class="text-black text-4xl">{{ doc.title }}</div>
-      <nuxt-content :document="doc" class="text-black text-left text-lg py-5" />
+      <h1>Classes</h1>
+      <div class="text-black text-lg text-left py-5">
+        There are 15 classes/occupations available through Codex with distinct
+        ability and mechanics that can give advantages and disadvantages based
+        on certain situation. Along with player's chosen
+        <nuxt-link aria-current="page" to="classes">Classes</nuxt-link> and
+        <nuxt-link aria-current="page" to="races">Races</nuxt-link>, available
+        <nuxt-link aria-current="page" to="skills">Skills</nuxt-link> may vary.
+      </div>
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
-  async asyncData({ $content }) {
-    const doc = await $content("classes/index").fetch();
-
-    return { doc };
-  },
-  data() {
-    return {
-      doc: "",
-      occupations: [""],
-    };
-  },
-});
-</script>
 
 <style lang="sass" scoped>
 @tailwind components
